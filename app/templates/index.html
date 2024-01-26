@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block js %} 
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}
+
+{% block css %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div id="welcome">
+        <h4 class="welcome-header">Welcome to BuddiesChat!</h4>
+        <div class="welcome-text">
+            <p>Join us for a nice chat and tea.</p>
+            <p>We promise a good time and great laughs.</p>
+        </div>
+
+        <p>Type your username</p>
+        <input id="user_name" type="text" placeholder="Your username" value="jack">
+        <button id="join_button">Join</button>
+    </div>
+{% endblock %}
