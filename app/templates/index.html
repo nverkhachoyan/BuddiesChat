@@ -1,9 +1,5 @@
 {% extends "base.html" %}
 
-{% block js %} 
-<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
-{% endblock %}
-
 {% block css %} 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 {% endblock %}
@@ -20,4 +16,14 @@
         <input id="user_name" type="text" placeholder="Your username">
         <button id="join_button">Join</button>
     </div>
+
+    <div id="chat">
+        <ul id="messages"></ul>
+        <input id="message_box" type="text" placeholder="Type your message">
+        <button id="send_a_message">Send</button>
+    </div>
+{% endblock %}
+
+{% block js %} 
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
 {% endblock %}
